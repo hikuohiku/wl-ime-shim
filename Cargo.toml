@@ -1,0 +1,15 @@
+[package]
+name = "wl-ime-shim"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+description = "Scale the position of IME candidate windows on Wayland"
+license = "MIT"
+repository = "https://github.com/hikuohiku/wl-ime-shim"
+keywords = ["wayland", "ime", "fcitx5", "chromium", "electron"]
+categories = ["command-line-utilities"]
+
+[dependencies]
+clap = { version = "4.5", features = ["derive"] }
+error_reporter = "1.0"
+wl-proxy = { version = "0.1.5", features = ["all-protocols"] }

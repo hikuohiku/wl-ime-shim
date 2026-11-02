@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 376" role="img" aria-labelledby="t d">
+<title id="t">IME candidate window position with and without the proxy</title>
+<desc id="d">A chat app with text being composed in the message box. Without the proxy, the app reports the caret at the midpoint of the line from the window's top-left corner to the real caret, so the candidate window appears there instead of next to the caret. With the proxy, it appears directly above the caret.</desc>
+<style>
+  text { font-family: system-ui, "Noto Sans CJK JP", "Noto Sans JP", sans-serif; }
+  .title { font-size: 18px; font-weight: 600; fill: #1f2328; }
+  .text { font-size: 16px; fill: #1f2328; }
+  .small { font-size: 13px; }
+  .label { font-size: 15px; font-weight: 600; fill: #cf222e; }
+  .ghost-text { font-size: 13px; fill: #57606a; }
+  .window { fill: #f6f8fa; stroke: #8c959f; stroke-width: 1.5; }
+  .sidebar { fill: #eaeef2; }
+  .line { fill: #d0d7de; }
+  .input { fill: #ffffff; stroke: #d0d7de; }
+  .popup { fill: #ffffff; stroke: #8c959f; }
+  .ghost { fill: #f6f8fa; stroke: #57606a; stroke-width: 1.5; stroke-dasharray: 5 4; }
+  .selected { fill: #ddf4ff; }
+  .underline { stroke: #1f2328; stroke-width: 1.5; }
+  .caret { stroke: #cf222e; stroke-width: 2.5; }
+  .arrow { stroke: #cf222e; stroke-width: 1.5; stroke-dasharray: 4 4; stroke-opacity: 0.55; }
+  .tip { fill: none; stroke: #cf222e; stroke-width: 1.5; stroke-opacity: 0.8; stroke-linecap: round; stroke-linejoin: round; }
+  @media (prefers-color-scheme: dark) {
+    .title, .text { fill: #e6edf3; }
+    .label { fill: #ff7b72; }
+    .ghost-text { fill: #8b949e; }
+    .window { fill: #161b22; stroke: #6e7681; }
+    .sidebar { fill: #0d1117; }
+    .line { fill: #30363d; }
+    .input { fill: #0d1117; stroke: #30363d; }
+    .popup { fill: #21262d; stroke: #6e7681; }
+    .ghost { fill: #161b22; stroke: #8b949e; }
+    .selected { fill: #1f4b77; }
+    .underline { stroke: #e6edf3; }
+    .caret, .arrow, .tip { stroke: #ff7b72; }
+  }
+</style>
+<g transform="translate(0 0)">
+  <text class="title" x="20" y="24">Without the proxy</text>
+  <clipPath id="w0"><rect x="20" y="40" width="480" height="320" rx="8"/></clipPath>
+  <rect class="window" x="20" y="40" width="480" height="320" rx="8"/>
+  <rect class="sidebar" x="20" y="40" width="140" height="320" clip-path="url(#w0)"/>
+  <rect class="line" x="36" y="62" width="90" height="10" rx="3"/>
+  <rect class="line" x="36" y="92" width="104" height="10" rx="3"/>
+  <rect class="line" x="36" y="122" width="76" height="10" rx="3"/>
+  <rect class="line" x="36" y="152" width="98" height="10" rx="3"/>
+  <rect class="line" x="36" y="182" width="84" height="10" rx="3"/>
+  <rect class="line" x="36" y="212" width="70" height="10" rx="3"/>
+  <circle class="line" cx="188" cy="77" r="12"/>
+  <rect class="line" x="210" y="66" width="170" height="9" rx="3"/>
+  <rect class="line" x="210" y="81" width="102" height="9" rx="3"/>
+  <circle class="line" cx="188" cy="125" r="12"/>
+  <rect class="line" x="210" y="114" width="250" height="9" rx="3"/>
+  <rect class="line" x="210" y="129" width="150" height="9" rx="3"/>
+  <circle class="line" cx="188" cy="173" r="12"/>
+  <rect class="line" x="210" y="162" width="130" height="9" rx="3"/>
+  <rect class="line" x="210" y="177" width="78" height="9" rx="3"/>
+  <circle class="line" cx="188" cy="221" r="12"/>
+  <rect class="line" x="210" y="210" width="214" height="9" rx="3"/>
+  <rect class="line" x="210" y="225" width="128" height="9" rx="3"/>
+  <circle class="line" cx="188" cy="269" r="12"/>
+  <rect class="line" x="210" y="258" width="180" height="9" rx="3"/>
+  <rect class="line" x="210" y="273" width="108" height="9" rx="3"/>
+  <rect class="input" x="172" y="305" width="316" height="40" rx="6"/>
+  <text class="text" x="250" y="331" text-anchor="end">へんかん</text>
+  <line class="underline" x1="186" y1="335" x2="250" y2="335"/>
+  <line class="caret" x1="254" y1="313" x2="254" y2="337"/>
+  <rect class="ghost" x="254" y="229" width="96" height="72" rx="4"/>
+  <text class="ghost-text" x="302" y="270" text-anchor="middle">expected</text>
+  <g transform="translate(137 188.5)">
+    <rect class="popup" width="96" height="72" rx="4"/>
+    <rect class="selected" x="3" y="5" width="90" height="20" rx="3"/>
+    <text class="text small" x="12" y="19">1 変換</text>
+    <text class="text small" x="12" y="41">2 返還</text>
+    <text class="text small" x="12" y="63">3 偏官</text>
+  </g>
+  <line class="arrow" x1="248.8" y1="306.9" x2="142.2" y2="182.6"/>
+  <polyline class="tip" points="153.9,187.0 142.2,182.6 144.8,194.9"/>
+  <polyline class="tip" points="237.1,302.5 248.8,306.9 246.2,294.6"/>
+  <text class="label" x="228" y="300" text-anchor="end">offset</text>
+</g>
+<g transform="translate(520 0)">
+  <text class="title" x="20" y="24">With the proxy</text>
+  <clipPath id="w520"><rect x="20" y="40" width="480" height="320" rx="8"/></clipPath>
+  <rect class="window" x="20" y="40" width="480" height="320" rx="8"/>
+  <rect class="sidebar" x="20" y="40" width="140" height="320" clip-path="url(#w520)"/>
+  <rect class="line" x="36" y="62" width="90" height="10" rx="3"/>
+  <rect class="line" x="36" y="92" width="104" height="10" rx="3"/>
+  <rect class="line" x="36" y="122" width="76" height="10" rx="3"/>
+  <rect class="line" x="36" y="152" width="98" height="10" rx="3"/>
+  <rect class="line" x="36" y="182" width="84" height="10" rx="3"/>
+  <rect class="line" x="36" y="212" width="70" height="10" rx="3"/>
+  <circle class="line" cx="188" cy="77" r="12"/>
+  <rect class="line" x="210" y="66" width="170" height="9" rx="3"/>
+  <rect class="line" x="210" y="81" width="102" height="9" rx="3"/>
+  <circle class="line" cx="188" cy="125" r="12"/>
+  <rect class="line" x="210" y="114" width="250" height="9" rx="3"/>
+  <rect class="line" x="210" y="129" width="150" height="9" rx="3"/>
+  <circle class="line" cx="188" cy="173" r="12"/>
+  <rect class="line" x="210" y="162" width="130" height="9" rx="3"/>
+  <rect class="line" x="210" y="177" width="78" height="9" rx="3"/>
+  <circle class="line" cx="188" cy="221" r="12"/>
+  <rect class="line" x="210" y="210" width="214" height="9" rx="3"/>
+  <rect class="line" x="210" y="225" width="128" height="9" rx="3"/>
+  <circle class="line" cx="188" cy="269" r="12"/>
+  <rect class="line" x="210" y="258" width="180" height="9" rx="3"/>
+  <rect class="line" x="210" y="273" width="108" height="9" rx="3"/>
+  <rect class="input" x="172" y="305" width="316" height="40" rx="6"/>
+  <text class="text" x="250" y="331" text-anchor="end">へんかん</text>
+  <line class="underline" x1="186" y1="335" x2="250" y2="335"/>
+  <line class="caret" x1="254" y1="313" x2="254" y2="337"/>
+  <g transform="translate(254 229)">
+    <rect class="popup" width="96" height="72" rx="4"/>
+    <rect class="selected" x="3" y="5" width="90" height="20" rx="3"/>
+    <text class="text small" x="12" y="19">1 変換</text>
+    <text class="text small" x="12" y="41">2 返還</text>
+    <text class="text small" x="12" y="63">3 偏官</text>
+  </g>
+</g>
+</svg>
